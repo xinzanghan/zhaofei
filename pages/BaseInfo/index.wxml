@@ -1,0 +1,120 @@
+<!-- 头部内容 -->
+<view class="top">
+    <view class="personal_info">
+        <view class="icon"></view>
+        <text>个人身份信息</text>
+    </view>
+    <view class="info_list">
+        <view class="info_item">
+            <view class="info_title">身份证号</view>
+            <view class="base_item_info">{{idcard}}</view>
+        </view>
+        <view class="info_item">
+            <view class="info_title">性别</view>
+            <view class="base_item_info">{{sex}}</view>
+        </view>
+        <view class="info_item">
+            <view class="info_title">出生日期</view>
+            <view class="base_item_info">{{birthday}}</view>
+        </view>
+    </view>
+</view>
+<!-- 初选合格证书编号 -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">初选合格证编号</view>
+            <input type="text" value="{{step1_q1}}" placeholder="请输入编号" placeholder-class="content_input" bindinput="serialNumber" />
+        </view>
+        <view class="content_item">
+            <view class="content_title">学生姓名</view>
+            <input type="text" value="{{step1_q2}}" placeholder="请输入姓名" placeholder-class="content_input" bindinput="studentName" />
+        </view>
+        <view class="content_item">
+            <view class="content_title">就读学校所在省/市/区</view>
+            <picker mode="region" bindchange="bindRegionChange">
+                <view class="choose_school">
+                    <view class="city_text" wx:if="{{step1_q3 == ''}}">请选择学校所在省/市/县</view>
+                    <view wx:else> {{step1_q3[0]}}-{{step1_q3[1]}}-{{step1_q3[2]}}</view>
+                    <image class="arrow" src="/images/arrow.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="content_item">
+            <view class="content_title">就读学校名称</view>
+            <input type="text" value="{{step1_q4}}" placeholder="请输入学校名称" placeholder-class="content_input" bindinput="schoolName"/>
+        </view>
+        <view class="content_item">
+            <view class="content_title">就读学校是否为学籍学校</view>
+            <view class="content_option">
+                <radio-group class="radio-group1" bindchange="changeSchool">
+                    <label >
+                        <radio class="radio_size" value="1" checked="{{step1_q5==1}}" color="#186AE6" />是
+                    </label>
+                    <label >
+                        <radio  class="radio_size" value="2" checked="{{step1_q5==2}}" color="#186AE6" />否
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+    </view>
+
+</view>
+<!-- 底部  年级排名稳定在前多少名-->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">本人在年级排名稳定在前多少名（咨询班主任）</view>
+            <input type="number" value="{{step1_q6}}" placeholder="请输入年级稳定排名" placeholder-class="content_input"  bindinput="classRanking" />
+        </view>
+        <view class="content_item">
+            <view class="content_title">去年初三毕业生数（咨询班主任）</view>
+            <input type="number" value="{{step1_q7}}" placeholder="请输入初三毕业生数" placeholder-class="content_input"  bindinput="graduationStudent" />
+        </view>
+        <view class="content_item">
+            <view class="content_title">去年全校考取省示范高中人数（咨询班主任）</view>
+            <view class="choose_school">
+                <input type="number" value="{{step1_q8}}" placeholder="请输入考取省示范高中人数" placeholder-class="content_input"  bindinput="peopleNum" />
+
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">今年初三毕业生数（咨询班主任）</view>
+            <input type="number"  value="{{step1_q9}}" placeholder="请输入今年初三毕业生数" placeholder-class="content_input"  bindinput="graduationNum" />
+        </view>
+        <view class="content_item last_item">
+            <view class="content_title">学校预估今年初三中考能考取省示范高中数 (咨询班主任)</view>
+            <input type="number"  value="{{step1_q10}}" placeholder="请输入今年初三毕业生数" placeholder-class="content_input" bindinput="predict" />
+        </view>
+    </view>
+
+</view>
+
+<!-- 班主任预估中考水平 -->
+<view class="down">
+    <view class="down_list">
+        <view class="down_item">
+            <view class="content_title">班主任预估你中考水平(咨询班主任)</view>
+            <radio-group bindchange="radioChange">
+                <!-- <label class="choose" wx:for="{{level}}" wx:key="{{item.value}}" wx:if="{{gaoDer == 1}}">
+                    <view class="choose_radio">
+                        <radio class="radio_size " value="{{item.value}}" checked="{{item.value==step1_q11}}" color="#186AE6" />
+                    </view>
+                    <view class="choose_value">{{item.name}}</view>
+                </label> -->
+                <label class="choose" wx:for="{{level}}" wx:key="{{item.value}}">
+                    <view class="choose_radio">
+                        <radio class="radio_size " value="{{item.value}}" checked="{{item.value==step1_q11||''}}" color="#186AE6" />
+                    </view>
+                    <view class="choose_value">{{item.name}}</view>
+                </label>
+            </radio-group>
+        </view>
+    </view>
+</view>
+<!-- 底部按钮 -->
+<view class="bottom">
+    <view class="btn" bindtap="next">
+        下一项
+    </view>
+</view>

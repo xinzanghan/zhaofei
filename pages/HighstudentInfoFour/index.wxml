@@ -1,0 +1,92 @@
+<!-- 本次考试 -->
+<view class="baseInfo">
+  <view class="base_state">
+    <view class="span"></view>
+    <view class="base_state_word">文化成绩</view>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">最近月考总分</view>
+    <input class="middle_item_word" value="{{step4_q1}}" placeholder="请输入分数" placeholder-class="pla_style" bindinput="InputLatelyScore"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">本次考试一本划线</view>
+    <input class="middle_item_word" value="{{step4_q2}}" placeholder="请输入分数" placeholder-class="pla_style" bindinput="InputThisLine"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">本次考试年级排名</view>
+    <input class="middle_item_word" value="{{step4_q3}}" placeholder="请输入排名" placeholder-class="pla_style" bindinput="InputThisRanking"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">本次月考发挥情况</view>
+    <radio-group class="radio-group1" bindchange="radioChange1">
+      <label class="radio" wx:for="{{exam}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step4_q4}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+</view>
+<!-- 上次考试 -->
+<view class="baseInfo">
+  <view class="middle_item">
+    <view class="middle_item_title">上次考试总分</view>
+    <input class="middle_item_word" value="{{step4_q5}}" placeholder="请输入分数" placeholder-class="pla_style" bindinput="InputLastScore"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">上次考试一本划线</view>
+    <input class="middle_item_word" value="{{step4_q6}}" placeholder="请输入分数" placeholder-class="pla_style" bindinput="InputLastLine"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">上次考试年级排名</view>
+    <input class="middle_item_word" value="{{step4_q7}}" placeholder="请输入排名" placeholder-class="pla_style" bindinput="InputLastRanking"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">上次月考发挥情况</view>
+    <radio-group class="radio-group1" bindchange="radioChange2">
+      <label class="radio" wx:for="{{exam}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step4_q8}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+</view>
+<!-- 是否加分 -->
+<view class="baseInfo">
+  <view class="middle_item">
+    <view class="middle_item_title">高考是否符合少数民族等优惠政策加分（报考省外大学）</view>
+    <radio-group class="radio-group1" bindchange="radioChange3">
+      <label class="radio">
+        <radio class="radio_size" value="1" checked="{{step4_q9==1}}" color="#186AE6" />是
+      </label>
+      <label class="radio">
+        <radio class="radio_size" value="2" checked="{{step4_q9==2}}" color="#186AE6" />否
+      </label>
+    </radio-group>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">具体分值</view>
+    <input class="middle_item_word" value="{{step4_q9_detail||''}}" model:value="{{step4_q9_detail}}" placeholder="若“是”，输入具体分值" placeholder-class="pla_style" bindinput="InputScore"/>
+  </view>
+</view>
+<!-- 本人认为 -->
+<view class="baseInfo">
+  <view class="radio_column_item">
+    <view class="middle_item_title">本人自认为高考能达到的成绩等次</view>
+    <radio-group class="radio-group" bindchange="radioChange4">
+      <label class="radio" wx:for="{{items}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step4_q10}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="radio_column_item">
+    <view class="middle_item_title">空军招飞教官现场预判的成绩等次</view>
+    <radio-group class="radio-group" bindchange="radioChange5">
+      <label class="radio" wx:for="{{itemss}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step4_q11}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+</view>
+<!-- 底部按钮 -->
+<view class="downBtn downBtn1">
+  <view class="back_btn" bindtap="toBackPage">上一项</view>
+  <view class="next_btn next_btn1" bindtap="toNextPage">提交</view>
+</view>

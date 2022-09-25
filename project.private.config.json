@@ -1,0 +1,112 @@
+{
+  "setting": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "基本信息2",
+          "pathName": "pages/BaseInfoTwo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "初选合格提交信息1",
+          "pathName": "pages/HighstudentInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "政审信息报表",
+          "pathName": "pages/PolityInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "初选合格提交信息2",
+          "pathName": "pages/HighstudentInfoTwo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "初选合格提交信息4",
+          "pathName": "pages/HighstudentInfoFour/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "初选合格3日提交信息1",
+          "pathName": "pages/PrimarySuccessInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "初选合格3日提交信息2",
+          "pathName": "pages/PrimarySuccessInfoTwo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "初选合格3日提交信息3",
+          "pathName": "pages/PrimarySuccessInfoThree/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "参检后续填报",
+          "pathName": "pages/JoinedInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "高考后估分提交信息",
+          "pathName": "pages/GuessScoreInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "政审信息填报",
+          "pathName": "pages/PolityInfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "高继凯",
+          "pathName": "pages/HighstudentInfoTwo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "12",
+          "pathName": "pages/HighstudentInfoFour/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "13",
+          "pathName": "pages/HighstudentInfoFour/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "14",
+          "pathName": "pages/PrimarySuccessInfoTwo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "初选合格提交信息3",
+          "pathName": "pages/HighstudentInfoThree/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "初选合格三日",
+          "pathName": "pages/Qualified/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

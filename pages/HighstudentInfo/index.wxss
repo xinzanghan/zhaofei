@@ -1,0 +1,59 @@
+
+.base_item{
+  height: 104rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #ebedf0;
+}
+.base_item_title{
+  width: 112rpx;
+  height: 40rpx;  
+  margin-right: 52rpx;
+}
+/* 中部初选合格证编号 */
+
+.nation_select{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.select_img{
+  width: 32rpx;
+  height: 32rpx;
+}
+
+/* 应往届 */
+.radio{
+  margin-right: 15rpx;
+  font-size: 28rpx;
+}
+.radio-group{
+  display: flex;
+}
+.city_text {
+  color: #C8C9CC;
+  font-size: 28rpx;
+}
+
+/* 下一项按钮 */
+.downBtn{
+  height: 120rpx;
+  background-color: #fff;
+  text-align: center;
+  margin-top:34rpx;
+  bottom: 68rpx;
+  padding:16rpx 32rpx;
+}
+.next_btn{
+  /* width: 686rpx; */
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color:#186AE6;
+  border-radius: 28rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 500;
+}

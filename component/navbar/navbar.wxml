@@ -1,0 +1,21 @@
+<view class='nav-wrap' style='height: {{height*2 + 20}}px;'>
+  <!-- <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>
+    <view>空军招收飞行学员政治考核</view>
+    <view>个人信息表</view>
+  </view> -->
+  <view class="gao_top" style='top: {{height }}px;'>
+    <text> {{navbarData.title}}</text>
+    <text> {{navbarData.title1}}</text>
+  </view>
+  <view style='display: flex; justify-content: space-around;flex-direction: column'>
+    <view class='nav-capsule' style='height: {{height*2 + 44}}px;' wx:if='{{navbarData.showCapsule}}'>
+      <view bindtap='_navback'>
+        <image src='../../images/arrow_left.png' mode='aspectFill' class='back-pre'></image>
+      </view>
+      <!-- <view class='navbar-v-line' wx:if='{{!share}}'></view> -->
+      <!-- <view bindtap='_backhome'>
+        <image src='../../images/arrow.png' mode='aspectFill' class='back-home'></image>
+      </view> -->
+    </view>
+  </view>
+</view>

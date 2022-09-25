@@ -1,0 +1,17 @@
+.content_bottom{
+  margin-bottom: 0 !important;
+  margin-right: 26rpx !important;
+}
+.middle_item_title{
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+.nation_select{
+  display: flex;
+}
+.select{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 5rpx;
+}

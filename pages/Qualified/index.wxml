@@ -1,0 +1,368 @@
+<!-- 头部内容 从角膜佩戴史开始至具体情况 -->
+<view class="top">
+    <view class="disease_situation">
+        <view class="icon"></view>
+        <text>病史情况</text>
+    </view>
+    <view class="top_list">
+        <view class="top_item1">
+            <view class="top_title1">身份证号码</view>
+            <view class="top_id">{{idcard}}</view>
+        </view>
+        <view class="top_item">
+            <view class="top_title">初选合格证编号</view>
+            <input type="text" value="{{q1}}" placeholder="请输入初选合格证编号" placeholder-class="top_input" bindinput="InputBianhao" />
+        </view>
+        <view class="top_item">
+            <view class="top_title">学生姓名</view>
+            <input type="text" value="{{q2}}" placeholder="请输入学生姓名" placeholder-class="top_input" bindinput="InputName" />
+        </view>
+        <view class="top_item">
+            <view class="top_title">就读学校名称</view>
+            <input type="text" value="{{q3}}" placeholder="请输入就读学校名称" placeholder-class="top_input" bindinput="InputSchoolName"/>
+        </view>
+        <view class="top_item">
+            <view class="top_title">左眼C字表视力</view>
+            <input type="text" value="{{q4}}" placeholder="请输入视力" placeholder-class="top_input" bindinput="InputLeft" />
+        </view>
+        <view class="top_item">
+            <view class="top_title">右眼C字表视力</view>
+            <input type="text" value="{{q5}}" placeholder="请输入视力" placeholder-class="top_input" bindinput="InputRight" />
+        </view>
+        <view class="top_item">
+            <view class="top_title">角膜塑形镜（OK镜）佩戴史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="History">
+                    <label class="radio">
+                        <radio class="radio_size"  value="1" checked="{{q6==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q6==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="top_item">
+            <view class="top_title">角膜屈光矫正手术史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="operation">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q7==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q7==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="top_item">
+            <view class="top_title">手术史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="operationd">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q8==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q8==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="top_item">
+            <view class="top_title">具体情况</view>
+            <!-- <input type="text" value="{{q8_detail}}" placeholder="若选择“有”请填写手术内容，如选择“无”请填写“无”字" placeholder-class="top_input" bindinput="situation" /> -->
+            <textarea class="textarea" cols="10" rows="10" type="text" value="{{q8_detail}}" placeholder="若选择“有”请填写手术内容，若选择“无”，请务必填写“无”字。" placeholder-class="top_input" bindinput="situation"></textarea>
+        </view>
+
+    </view>
+</view>
+<!-- 骨折史-->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">骨折史、关节脱臼史、头颅摔伤史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="wound">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q9==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q9==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{q9_detail}}" placeholder="若“有”，写明什么时间因何原因行何种手术" placeholder-class="content_input" bindinput="situation2" /> -->
+            <textarea class="textarea" cols="10" rows="10"type="text" value="{{q9_detail}}" placeholder="若选择“有”，请写明何部位何时因何原因受何伤以及治疗经过。若选择“无”，请务必填写“无”字。" placeholder-class="content_input" bindinput="situation2"></textarea>
+        </view>
+    </view>
+</view>
+<!--结石病史  -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">结石病史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="stone">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q10==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q10==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{q10_detail}}" placeholder="若“有”，写明什么部位及情况" placeholder-class="content_input" bindinput="situation3" /> -->
+            <textarea class="textarea" cols="10" rows="10" type="text" value="{{q10_detail}}" placeholder="若选择“有”，写明什么部位及情况，若选择“无”，请务必填写“无”字。" placeholder-class="content_input" bindinput="situation3"></textarea>
+        </view>
+    </view>
+</view>
+<!--结核病史（肺结核、肠结核、淋巴结核等）  -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">结核病史（肺结核、肠结核、淋巴结核等）</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="tuberculosis">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q11==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q11==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">肾炎、肾病病史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="nephritis">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q12==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q12==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">支气管哮喘病史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="bronchus">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q13==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q13==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">消化系统溃疡病史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="digestive">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q14==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q14==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">肝炎病史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="hepatitis">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q15==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q15==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text"  value="{{q15_detail}}" placeholder="若“有”，写明何种肝炎" placeholder-class="content_input" bindinput="situation4" /> -->
+            <textarea class="textarea1" cols="10" rows="10" type="text"  value="{{q15_detail}}" placeholder="若选择“有”，写明何时在何处诊断以及治疗经过（结核还需写明患结核部位，哮喘需写明是否进行过吸入药物治疗，溃疡需写明是否进行过胃镜检查，肝炎需写明所患为何种肝炎,若选择“无”，请务必填写“无”字。" placeholder-class="content_input" bindinput="situation4"></textarea>
+        </view>
+    </view>
+</view>
+<!--晕厥或昏迷史  -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">晕厥或昏迷史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="faint">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q16==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q16==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{q16_detail}}" placeholder="若“有”，写明什么部位及情况" placeholder-class="content_input" bindinput="situation5" /> -->
+            <textarea class="textarea" cols="10" rows="10" type="text" value="{{q16_detail}}" placeholder="若有过晕厥或昏迷史，需写明什么时间因何原因晕厥或昏迷，以及晕厥或昏迷状态持续时间,若选择“无”，请务必填写“无”字。" placeholder-class="content_input" bindinput="situation5"></textarea>
+        </view>
+    </view>
+</view>
+<!--过敏性鼻炎病史  -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">过敏性鼻炎病史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="rhinitis">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q17==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q17==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">晕车、晕船史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="pelagism">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q18==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q18==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">本人及父系、母系三代亲属精神病史</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="psychosis">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q19==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q19==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{q19_detail}}" placeholder=" 若“有”，写明何人何时在何医院诊断为何种精神疾病，以及主要症状表现" placeholder-class="content_input" bindinput="situation6" /> -->
+            <!-- 若有过敏性鼻炎，需写明何时在何处诊断以及治疗经过。若选择“无”，请务必填写“无”字。 -->
+            <textarea class="textarea1" cols="10" rows="10" type="text" value="{{q19_detail}}" placeholder=" 若有过敏性鼻炎，需写明何时在何处诊断以及治疗经过。若选择“无”，请务必填写“无”字。若选择“有”，请写明何人何时在何医院诊断为何种精神疾病，以及主要症状表现，若选择“无”，请务必填写“无”字。" placeholder-class="content_input" bindinput="situation6"></textarea>
+
+        </view>
+    </view>
+</view>
+<!--体检方面其他需要说明的问题  -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">体检方面其他需要说明的问题 (非必填)</view>
+            <input type="text" value="{{q20||''}}" placeholder=" 是否有其他问题说明" placeholder-class="content_input" bindinput="situation7" />
+        </view>
+    </view>
+</view>
+<!-- 父母、祖父母、外祖父母以及他们的子女有无失踪失联、收养领养或送人抱养的情况 -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item family_situation">
+            <view class="content_title">父母、祖父母、外祖父母以及他们的子女有无失踪失联、收养领养或送人抱养的情况</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="family">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q21==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q21==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{q21_detail}}" placeholder="若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="situation8" /> -->
+            <textarea class="textarea" cols="10" rows="10" type="text" value="{{q21_detail}}" placeholder="若选择“有”请填写具体情况。若选择“无”，请务必填写“无”字。" placeholder-class="content_input" bindinput="situation8"></textarea>
+        </view>
+    </view>
+</view>
+<!--父母、祖父母、外祖父母以及他们所生育的子女有无违法犯罪的情况  -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item family_situation">
+            <view class="content_title">父母、祖父母、外祖父母以及他们所生育的子女有无违法犯罪的情况</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="crime">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q22==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q22==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{q22_detail}}" placeholder="若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="situation9" /> -->
+            <textarea class="textarea" cols="10" rows="10"  type="text" value="{{q22_detail}}" placeholder="若选择“有”请填写具体情况。若选择“无”，请务必填写“无”字。" placeholder-class="content_input" bindinput="situation9"></textarea>
+        </view>
+    </view>
+</view>
+<!--父母、祖父母、外祖父母以及他们所生育的子女有无在国外或港澳台地区工作、学习、居住等情况  -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item family_situation">
+            <view class="content_title">父母、祖父母、外祖父母以及他们所生育的子女有无在国外或港澳台地区工作、学习、居住等情况</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="learn">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q23==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q23==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{q23_detail}}" placeholder="若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="situation10" /> -->
+            <textarea class="textarea" cols="10" rows="10"  type="text" value="{{q23_detail}}" placeholder="若选择“有”请填写具体情况。若选择“无”，请务必填写“无”字。" placeholder-class="content_input" bindinput="situation10"></textarea>
+        </view>
+    </view>
+</view>
+<!--政治考核方面其他需要说明的问题  -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">政治考核方面其他需要说明的问题 (非必填)</view>
+            <!-- <input type="text" value="{{q24||''}}" placeholder=" 若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="situation11" /> -->
+            <textarea class="textarea" cols="10" rows="10"  type="text" value="{{q24||''}}" placeholder=" 若选择“有”请填写具体情况。若选择“无”，请务必填写“无”字。" placeholder-class="content_input" bindinput="situation11"></textarea>
+        </view>
+    </view>
+</view>
+
+<!-- 底部按钮 -->
+<view class="bottom">
+    <view class="btn" bindtap="submit">
+        提交
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<!-- 头部导航栏 -->
+<view class="header">
+  <view class="header-text">高中填报</view>
+  <!--身份证号码 -->
+  <view class="main-item">
+    <view class="main-title">身份证号码</view>
+    <input type="text" class="id-input" placeholder="请输入身份证号码" placeholder-class="input-color" bindinput="onInputIdNum" maxlength="18" data-idNum="{{idNum}}"/>
+  </view>
+  <!-- 密码 -->
+  <view class="main-item">
+    <view class="main-title">密码</view><input type="password" class="id-input" placeholder="请输入密码（初始密码为123456）" placeholder-class="input-color" bindinput="onInputIdCode" maxlength="12"/>
+  </view>
+  <!-- 确认按钮 -->
+  <view class="btn" bindtap="toHighStudentInfo">确认</view><!-- 修改密码 -->
+  <view class="change-password" bindtap="toChangePassword">修改密码</view>
+</view> 

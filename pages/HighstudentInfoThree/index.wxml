@@ -1,0 +1,37 @@
+<view class="baseInfo">
+  <view class="base_state">
+    <view class="span"></view>
+    <view class="base_state_word">报考志愿</view>
+  </view>
+  <view class="radio_column_item">
+    <view class="middle_item_title">是否兼报民航、海军招飞</view>
+    <!-- <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+        <radio class="radio_size" value="{{item.value}}" checked="" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group> -->
+    <view class="weui-cells weui-cells_after-title">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="{{item.value}}">
+            <view class="weui-cell__hd">
+              <checkbox value="{{item.value}}" checked="{{item.checked}}" color="#186AE6"/>
+            </view>
+            <view class="weui-cell__bd">{{item.name}}</view>
+          </label>
+        </checkbox-group>
+      </view>
+  </view>
+  <view class="radio_column_item">
+    <view class="middle_item_title">本人报考意愿（谨慎填写）</view>
+    <radio-group class="radio-group" bindchange="radioChanged">
+      <label class="radio" wx:for="{{itemss}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step3_q2}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+</view>
+<!-- 底部按钮 -->
+<view class="downBtn downBtn1">
+  <view class="back_btn" bindtap="toBackPage">上一项</view>
+  <view class="next_btn next_btn1" bindtap="toNextPage">下一项</view>
+</view>

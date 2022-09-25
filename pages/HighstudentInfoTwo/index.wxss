@@ -1,0 +1,35 @@
+/* 底部按钮 */
+.downBtn {
+  height: 120rpx;
+  background-color: #fff;
+  text-align: center;
+  margin-top: 34rpx;
+  bottom: 68rpx;
+  padding: 16rpx 32rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back_btn {
+  width: 182rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #F2F3F5;
+  font-size: 32rpx;
+  font-weight: 500;
+  border-radius: 28rpx;
+  text-align: center;
+
+}
+
+.next_btn {
+  width: 474rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #186AE6;
+  border-radius: 28rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 500;
+}

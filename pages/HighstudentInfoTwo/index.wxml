@@ -1,0 +1,60 @@
+<!-- 上部初选情况 -->
+<view class="baseInfo">
+  <view class="base_state">
+    <view class="span"></view>
+    <view class="base_state_word">初选情况</view>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">左眼C字表视力</view>
+    <input class="middle_item_word" value="{{step2_q1}}" placeholder="请输入视力" placeholder-class="pla_style" bindinput="InputLeft"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">右眼C字表视力</view>
+    <input class="middle_item_word" value="{{step2_q2}}" placeholder="请输入视力" placeholder-class="pla_style" bindinput="InputRight"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">身高（cm）</view>
+    <input type="number" value="{{step2_q3}}" class="middle_item_word" placeholder="请输入身高" placeholder-class="pla_style" bindinput="InputHeight"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">标准体重（kg）</view>
+    <input class="middle_item_word" value="{{step2_q4}}" placeholder="请输入标准体重" model:value="{{step2_q4}}" placeholder-class="pla_style" bindinput="InputWeight" disabled/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">实际体重（kg）</view>
+    <input type="number" class="middle_item_word"  value="{{step2_q5}}" placeholder="请输入实际体重" placeholder-class="pla_style" bindinput="InputRealWeight"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">体重比（%）</view>
+    <input class="middle_item_word" value="{{step2_q6}}" placeholder="" model:value="{{step2_q6}}" placeholder-class="pla_style" bindinput="InputOnWeight" disabled/>
+  </view>
+
+</view>
+<!-- 医生交代注意事项 -->
+<view class="baseInfo">
+  <view class="radio_column_item">
+    <view class="middle_item_title">医生交代注意事项1</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step2_q7}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="radio_column_item">
+    <view class="middle_item_title">医生交代注意事项2</view>
+    <radio-group class="radio-group" bindchange="radioChanged">
+      <label class="radio" wx:for="{{itemss}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step2_q8}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">医生交代注意事项3 (非必填)</view>
+    <input type="text" placeholder="请手动输入"  value="{{step2_q9}}" placeholder-class="pla_style" bindinput="InputNotice"/>
+  </view>
+</view>
+<!-- 底部按钮 -->
+<view class="downBtn downBtn1">
+  <view class="back_btn" bindtap="toBackPage">上一项</view>
+  <view class="next_btn next_btn1" bindtap="toNextPage">下一项</view>
+</view>

@@ -1,0 +1,27 @@
+.down_item{
+  padding-top: 32rpx;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+/* 下一项按钮 */
+.downBtn{
+  height: 120rpx;
+  background-color: #fff;
+  text-align: center;
+  margin-top:34rpx;
+  bottom: 68rpx;
+  padding:16rpx 32rpx;
+}
+.next_btn{
+  /* width: 686rpx; */
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color:#186AE6;
+  border-radius: 28rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 500;
+}

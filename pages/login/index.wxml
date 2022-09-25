@@ -1,0 +1,28 @@
+<!-- logo -->
+<view class="top-container">
+  <image src="/images/logo@2x.png" class="top-logo"></image>
+  <view class="top-word">招飞小程序</view>
+</view>
+<!-- 主要内容 -->
+<view class="middle-container">
+  <view class="middle-item" bindtap="toHighStudent">
+    <view class="midddle-left">
+      <image class="left-img" src="/images/ic_student1@2x.png"></image>
+      <view class="left-word">高中生初选合格信息登记</view>
+    </view>
+
+    <image class="midddle-right" src="/images/ic_arrow@2x.png"></image>
+
+  </view>
+  <view class="middle-item middle-student" bindtap="toMiddleStudent">
+    <view class="midddle-left">
+      <image class="left-img" src="/images/ic_student2@2x.png"></image>
+      <view class="left-word">初中生初选合格信息登记</view>
+    </view>
+
+    <image class="midddle-right" src="/images/ic_arrow@2x.png"></image>
+
+  </view>
+
+  <view class="down-btn">刷新</view>
+</view>

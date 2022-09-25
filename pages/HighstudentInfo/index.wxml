@@ -1,0 +1,153 @@
+<!-- 上部基本情況 -->
+<view class="baseInfo">
+  <view class="base_state">
+    <view class="span"></view>
+    <view class="base_state_word">基本情况</view>
+  </view>
+  <view class="base_info">
+    <view class="base_item">
+      <view class="base_item_title">身份证号</view>
+      <view class="base_item_info">{{idcard}}</view>
+    </view>
+    <view class="base_item">
+      <view class="base_item_title">性別</view>
+      <view class="base_item_info">{{sex}}</view>
+    </view>
+    <view class="base_item">
+      <view class="base_item_title">出生日期</view>
+      <view class="base_item_info">{{birthday}}</view>
+    </view>
+  </view>
+</view>
+<!-- 中部初选合格证编号 -->
+<view class="baseInfo">
+  <view class="middle_item">
+    <view class="middle_item_title">初选合格证编号</view>
+    <input type="text" class="middle_item_word" value="{{step1_q1}}" placeholder="请输入编号" placeholder-class="pla_style" bindinput="InputBianhao"/>
+  </view> 
+  <view class="middle_item">
+    <view class="middle_item_title">学生姓名</view>
+    <input class="middle_item_word" value="{{step1_q2}}" placeholder="请输入姓名" placeholder-class="pla_style" bindinput="InputName"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">参与初选地点</view>
+    <input class="middle_item_word" value="{{step1_q3}}" placeholder="请输入初选地点" placeholder-class="pla_style" bindinput="InputAddress"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">民族</view>
+    <input class="middle_item_word" value="{{step1_q4}}" placeholder="请输入民族" placeholder-class="pla_style" bindinput="bindPickerChange"/>
+    <!-- <picker mode = "selector" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
+      <view class="nation_select">
+        <view class="city_text" wx:if="{{index == 999999}}">请选择民族</view>
+        <view wx:else>{{array[index]}}</view>
+        <image class="select_img" src="/images/ic_arrow2@2x.png"></image>
+      </view>
+    </picker> -->
+  </view>
+</view>
+<!-- 应往届 -->
+<view class="baseInfo">
+  <view class="middle_item">
+    <view class="middle_item_title">应往届</view>
+    <radio-group class="radio-group1" bindchange="radioChange1">
+      <label class="radio">
+        <radio class="radio_size" value="1" checked="{{step1_q5==1}}" color="#186AE6" />应届
+      </label>
+      <label class="radio">
+      <radio class="radio_size" value="2" checked="{{step1_q5==2}}" color="#186AE6" />往届
+      </label>
+    </radio-group>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">政治面貌</view>
+    <radio-group class="radio-group1" bindchange="radioChange2">
+      <label class="radio" wx:for="{{items}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step1_q6}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">户口类型</view>
+    <radio-group class="radio-group1" bindchange="radioChange3">
+      <label class="radio">
+        <radio class="radio_size" value="1" checked="{{step1_q7==1}}" color="#186AE6" />农户
+      </label>
+      <label class="radio">
+        <radio class="radio_size" value="2" checked="{{step1_q7==2}}" color="#186AE6" />非农户
+      </label>
+    </radio-group>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">就读学校所在省/市/县</view>
+    <!-- <view class="nation_select">
+      <input class="middle_item_word" placeholder="就读学校所在省/市/县" placeholder-class="pla_style" value="{{region}}" />{{region[0].value}}{{region[1]}}{{region[2]}}
+      <picker class="select_wrap" mode = "region" bindchange="bindPickerChange" >
+        <image class="select_img" src="/images/ic_arrow2@2x.png"></image>
+      </picker>
+    </view> -->
+    <picker mode="region" bindchange="bindRegionChange">
+      <view class="nation_select">
+        <view class="city_text" wx:if="{{step1_q8 == ''}}">请选择学校所在省/市/县</view>
+        <view wx:else> {{step1_q8[0]}}-{{step1_q8[1]}}-{{step1_q8[2]}}</view>
+        <image class="select_img" src="/images/ic_arrow2@2x.png"></image>
+      </view>
+    </picker>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">就读学校名称</view>
+    <input class="middle_item_word" value="{{step1_q9}}" placeholder="请输入学校名称" placeholder-class="pla_style" bindinput="InputReading"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">学籍学校名称</view>
+    <input class="middle_item_word" value="{{step1_q10}}" placeholder="请输入学校名称" placeholder-class="pla_style" bindinput="InputReaded"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">参加高考省份</view>
+    <input class="middle_item_word" value="{{step1_q11}}" placeholder="请输入高考省份" placeholder-class="pla_style" bindinput="InputProvince"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">高考外语语种</view>
+    <input class="middle_item_word" value="{{step1_q12}}" placeholder="请输入高考外语语种" placeholder-class="pla_style" bindinput="InputEnglish"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">文理科</view>
+    <radio-group class="radio-group1" bindchange="radioChange4">
+      <label class="radio">
+        <radio class="radio_size" value="1" checked="{{step1_q13==1}}" color="#186AE6" />选考物理
+      </label>
+      <label class="radio">
+        <radio class="radio_size" value="2" checked="{{step1_q13==2}}" color="#186AE6" />未选考物理
+      </label>
+      <!-- <label class="radio">
+        <radio class="radio_size" value="不分文理" checked="" color="#186AE6" />不分文理
+      </label> -->
+    </radio-group>
+  </view>
+</view>
+<!-- 高三班主任姓名 -->
+<view class="baseInfo">
+  <view class="middle_item">
+    <view class="middle_item_title">高三班主任姓名</view>
+    <input class="middle_item_word" value="{{step1_q14}}" placeholder="请输入班主任姓名" placeholder-class="pla_style"  bindinput="InputTeacher"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">班主任手机号</view>
+    <input type="number" class="middle_item_word" placeholder="请填写手机号" placeholder-class="pla_style" value="{{step1_q15}}" bindinput="teacherPhone" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">本人手机号</view>
+    <input type="number" class="middle_item_word" placeholder="请填写手机号" placeholder-class="pla_style" value="{{step1_q16}}" bindinput="myPhone" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">父母手机号码1</view>
+    <input type="number" class="middle_item_word" placeholder="请填写手机号" placeholder-class="pla_style" value="{{step1_q17}}" bindinput="parentPhone1" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">父母手机号码2 (非必填)</view>
+    <input type="number" class="middle_item_word" placeholder="请填写手机号" placeholder-class="pla_style" value="{{step1_q18||''}}" bindinput="parentPhone2" />
+  </view>
+</view>
+<!-- 下一项按钮 -->
+<view class="downBtn">
+  <view class="next_btn" bindtap="toNextPage">下一项</view>
+</view>

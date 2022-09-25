@@ -1,0 +1,89 @@
+
+<!-- 下一个页面 -->
+<view class="content">
+    <view class="base_state">
+    <view class="span"></view>
+    <view class="base_state_word">政审情况</view>
+  </view>
+    <view class="content_list">
+        <view class="content_item family_situation">
+            <view class="content_title">父母、祖父母、外祖父母以及他们的子女有无失踪失联、收养领养或送人抱养的情况</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="radioChange1">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{step3_q1==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{step3_q1==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item2">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{step3_q1_detail}}" placeholder="若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="InputSpecialCondition1"/> -->
+            <textarea type="text" value="{{step3_q1_detail}}" placeholder="若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="InputSpecialCondition1" cols="30" rows="10"></textarea>
+        </view>
+    </view>
+</view>
+
+<view class="content">
+    <view class="content_list">
+        <view class="content_item family_situation">
+            <view class="content_title">父母、祖父母、外祖父母以及他们所生育的子女有无违法犯罪的情况</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="radioChange2">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{step3_q2==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{step3_q2==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item2">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{step3_q2_detail}}" placeholder="若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="InputSpecialCondition2"/> -->
+            <textarea type="text" value="{{step3_q2_detail}}" placeholder="若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="InputSpecialCondition2" cols="3" rows="10"></textarea>
+        </view>
+    </view>
+</view>
+
+<view class="content">
+    <view class="content_list">
+        <view class="content_item family_situation">
+            <view class="content_title">父母、祖父母、外祖父母以及他们所生育的子女有无在国外或港澳台地区工作、学习、居住等情况</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="radioChange3">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{step3_q3==1}}" color="#186AE6" />有
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{step3_q3==2}}" color="#186AE6" />无
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item2">
+            <view class="content_title">具体情况</view>
+            <!-- <input type="text" value="{{step3_q3_detail}}" placeholder="若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="InputSpecialCondition3"/> -->
+            <textarea type="text" value="{{step3_q3_detail}}" placeholder="若选择“有”请填写具体情况。如选择“无”请填写“无”字" placeholder-class="content_input" bindinput="InputSpecialCondition3" cols="3" rows="10"></textarea>
+        </view>
+    </view>
+</view>
+
+<view class="content content_bottom">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">政治考核方面其他需要说明的问题 (非必填)</view>
+            <input type="text" value="{{step3_q4||''}}" placeholder=" 是否有其他问题说明" placeholder-class="content_input" bindinput="InputSpecialCondition4"/>
+        </view>
+    </view>
+</view>
+
+<!-- 底部按钮 -->
+<view class="downBtn downBtn1">
+  <view class="back_btn" bindtap="toBackPage">上一项</view>
+  <view class="next_btn next_btn1" bindtap="toNextPage">提交</view>
+</view>

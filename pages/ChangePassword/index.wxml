@@ -1,0 +1,31 @@
+<!-- 头部导航栏 -->
+<view class="header">
+  <view class="header-text">修改密码</view>
+</view>  
+  <!--身份证号码 -->
+<view class="main">
+  <view class="main-item">
+    <view class="main-title">身份证号码</view>
+    <input type="text" class="id-input" placeholder="请输入身份证号码" placeholder-class="input-color" bindinput="onInputIdNum" maxlength="18" data-idcard="{{idcard}}"/>
+  </view><!-- 密码 -->
+  <view class="main-item">
+    <view class="main-title">密码</view>
+    <input type="password" class="id-input" placeholder="请输入密码（初始密码为123456）" placeholder-class="input-color" bindinput="onInputidCode" data-newpassword="{{newpassword}}"/>
+  </view><!-- 确认密码 -->
+  <view class="main-item">
+    <view class="main-title">确认密码</view>
+    <input type="password" class="id-input" placeholder="请再次输入密码" placeholder-class="input-color" data-idConfirm="{{idConfirm}}" bindinput="onInputidConfirm"/>
+  </view><!-- 确认按钮 -->
+  <view class="btn" bindtap="toMask">确认</view>
+</view>
+<!-- 修改密码确认弹框 -->
+<view class="mask open" wx:if="{{isShow}}">
+  <view class="check_box">
+    <view class="check_title">修改密码确认</view>
+    <view class="check_word">为了您的信息安全，请记住您修改的密码</view>
+    <view class="check_btn_wrap">
+      <view class="check_btn left" bindtap="cancel">取消</view>
+      <view class="check_btn right" bindtap="confirm">确认</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/login/index",
+    "pages/logs/logs",
+    "pages/MiddleStudent/index",
+    "pages/MiddleStudentIndex/index",
+    "pages/BaseInfo/index",
+    "pages/BaseInfoTwo/index",
+    "pages/Qualified/index",
+    "pages/PolityInfo/index",
+    "pages/PolityCheckInfo/index",
+    "pages/HighStudent/index",
+    "pages/ChangePassword/index",
+    "pages/HighStudentIndex/index",
+    "pages/HighstudentInfo/index",
+    "pages/HighstudentInfoTwo/index",
+    "pages/HighstudentInfoThree/index",
+    "pages/HighstudentInfoFour/index",
+    "pages/PrimarySuccessInfo/index",
+    "pages/PrimarySuccessInfoTwo/index",
+    "pages/PrimarySuccessInfoThree/index",
+    "pages/JoinedInfo/index",
+    "pages/GuessScoreInfo/index" 
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

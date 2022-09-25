@@ -1,0 +1,138 @@
+/* 背景 */
+page {
+    background-color:#F7F8FA;
+}
+/* 头部样式 */
+.top {
+    padding: 0 32rpx;
+    /* height: 386rpx; */
+    background-color: #fff;
+}
+
+.personal_info {
+    justify-content: flex-start;
+    display: flex;
+    height: 74rpx;
+    align-items: center;
+
+}
+
+.icon {
+    width: 6rpx;
+    height: 23rpx;
+    border-radius: 24rpx;
+    background-color: #186AE6;
+    margin-right: 16rpx;
+}
+
+.personal_info>text {
+    color: #323233;
+    font-size: 32rpx;
+    font-weight: 700;
+}
+
+.info_item {
+    height: 104rpx;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid #ebedf0;
+}
+
+.info_title {
+    width: 112rpx;
+    color: #323233;
+    font-size: 28rpx;
+    margin-right: 52rpx;
+}
+
+/* 中间样式 */
+.content{
+    padding: 0 32rpx;
+    /* height: 386rpx; */
+    background-color: #fff;
+}
+.content_list{
+    margin-top: 20rpx;
+}
+.content_item{
+    height: 160rpx;
+    border-bottom: 1px solid #ebedf0;
+}
+.content_item>input{
+    margin-top: 16rpx;
+}
+
+.content_title{
+  padding-top: 32rpx;
+  color: #323233;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+.content_input{
+    color: #C8C9CC;
+    font-size: 28rpx;
+   /* margin-top: 16rpx; */
+}
+.choose_school{
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16rpx;
+    /* align-items: center; */
+}
+.city_text {
+    color: #C8C9CC;
+    font-size: 28rpx;
+  }
+.arrow{
+    width: 32rpx;
+    height: 32rpx;
+}
+.content_option{
+    margin-top: 16rpx;
+}
+.radio_size{
+    transform:scale(0.8);
+}
+/* 班主任预估中考水平样式 */
+.down{
+    padding: 0 32rpx;
+    /* height: 386rpx; */
+    background-color: #fff;
+}
+.down_list{
+    margin-top: 20rpx;
+}
+.down_item{
+    border-bottom: 1px solid #ebedf0;
+}
+.choose{
+    display: flex;
+    margin-top: 16rpx;
+    margin-bottom: 32rpx;
+    align-items: center;
+}
+
+.choose_value{
+    color: #323233;
+    font-size: 28rpx;
+}
+/* 底部按钮样式 */
+.bottom{
+    display: flex;
+    align-items: center;
+    height: 120rpx;
+   margin: 32rpx 0;
+    background-color: #fff;
+}
+.btn{
+    width: 686rpx;
+   margin: 0 auto;
+    height: 88rpx;
+    background-color: #186AE6;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 88rpx;
+    border-radius: 28rpx;
+    font-size: 32rpx;
+}

@@ -1,0 +1,141 @@
+<view class="baseInfo">
+  <view class="base_item">
+    <view class="base_item_title">身份证号</view>
+    <view class="base_item_info">{{idcard}}</view>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">初选合格证编号</view>
+    <input class="middle_item_word" value="{{q1}}" placeholder="请输入初选合格证编号" placeholder-class="pla_style" bindinput="InputBianhao" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">就读学校名称</view>
+    <input class="middle_item_word" value="{{q2}}" placeholder="请输入学校名称" placeholder-class="pla_style" bindinput="InputSchoolName" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">学生姓名</view>
+    <input class="middle_item_word" value="{{q3}}" placeholder="请输入学生姓名" placeholder-class="pla_style" bindinput="InputName" />
+  </view>
+</view>
+<!-- 各科成绩 -->
+<view class="baseInfo">
+  <view class="middle_item">
+    <view class="middle_item_title">语文成绩</view>
+    <input class="middle_item_word" value="{{q4}}" placeholder="请输入分数" placeholder-class="pla_style" bindinput="InputChineseScore" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">数学成绩</view>
+    <input class="middle_item_word" value="{{q5}}" placeholder="请输入分数" placeholder-class="pla_style" bindinput="InputMathScore" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">英语成绩</view>
+    <input class="middle_item_word" value="{{q6}}" placeholder="请输入分数" placeholder-class="pla_style" bindinput="InputEnglishScore" />
+  </view>
+</view>
+<!-- 选考科目 -->
+<view class="baseInfo">
+  <!-- <view class="base_item">
+    <radio-group class="radio-group1" bindchange="radioChange">
+      <label class="radio content_bottom">
+        <radio class="radio_size" value="物理  化学  生物" checked="" color="#186AE6" />物理  化学  生物
+      </label>
+      <label class="radio content_bottom">
+        <radio class="radio_size" value="历史  政治  地理" checked="" color="#186AE6" />历史  政治  地理
+      </label>
+    </radio-group>
+  </view> -->
+  <view class="middle_item">
+   
+      <!-- <text>选考科目1</text>
+      <image class="select" src="/images/ic_select.png"></image> -->
+      <!-- <text>{{array[index]}}</text> -->
+      <!-- <picker mode="selector" bindchange="bindPickerChange1" value="{{array[index]}}" range="{{array}}" bindconfirm="">
+        <view class="nation_select">
+          <view class="city_text" wx:if="{{index == 999}}">选考科目1</view>
+          <view >选考科目1 {{name1}}</view>
+          <image class="select" src="/images/ic_select.png"></image>
+        </view>
+      </picker> -->
+      <view class="middle_item_title">物理成绩</view>
+
+
+    <input class="middle_item_word" value="{{q7}}" placeholder="请输入物理成绩" placeholder-class="pla_style" bindinput="InputPhysicsScore" />
+  </view>
+  <view class="middle_item">
+      <!-- <picker mode="selector" bindchange="bindPickerChange2" value="{{array[index]}}" range="{{array}}">
+        <view class="nation_select">
+          <view class="city_text" wx:if="{{index == 999}}">选考科目1</view>
+          <view >选考科目2 {{name2}}</view>
+          <image class="select" src="/images/ic_select.png"></image>
+        </view>
+      </picker> -->
+      <view class="middle_item_title">化学成绩</view>
+    <input class="middle_item_word" value="{{q8}}" placeholder="请化学输入成绩" placeholder-class="pla_style" bindinput="InputChymistScore" />
+  </view>
+  <view class="middle_item">
+      <!-- <picker mode="selector" bindchange="bindPickerChange3" value="{{array[index]}}" range="{{array}}">
+        <view class="nation_select">
+          <view class="city_text" wx:if="{{index == 999}}">选考科目1</view>
+          <view >选考科目3 {{name3}}</view>
+          <image class="select" src="/images/ic_select.png"></image>
+        </view>
+      </picker> -->
+      <view class="middle_item_title">生物成绩</view>
+    <input class="middle_item_word" value="{{q9}}" placeholder="请生物输入成绩" placeholder-class="pla_style" bindinput="InputBiologyScore" />
+  </view>
+  <view class="middle_item">
+      <!-- <picker mode="selector" bindchange="bindPickerChange3" value="{{array[index]}}" range="{{array}}">
+        <view class="nation_select">
+          <view class="city_text" wx:if="{{index == 999}}">选考科目1</view>
+          <view >选考科目3 {{name3}}</view>
+          <image class="select" src="/images/ic_select.png"></image>
+        </view>
+      </picker> -->
+      <view class="middle_item_title">历史成绩</view>
+    <input class="middle_item_word" value="{{q10}}" placeholder="请历史输入成绩" placeholder-class="pla_style" bindinput="InputHistoryScore" />
+  </view>
+  <view class="middle_item">
+      <!-- <picker mode="selector" bindchange="bindPickerChange3" value="{{array[index]}}" range="{{array}}">
+        <view class="nation_select">
+          <view class="city_text" wx:if="{{index == 999}}">选考科目1</view>
+          <view >选考科目3 {{name3}}</view>
+          <image class="select" src="/images/ic_select.png"></image>
+        </view>
+      </picker> -->
+      <view class="middle_item_title">政治成绩</view>
+    <input class="middle_item_word" value="{{q11}}" placeholder="请政治输入成绩" placeholder-class="pla_style" bindinput="InputPolityScore" />
+  </view>
+  <view class="middle_item">
+      <!-- <picker mode="selector" bindchange="bindPickerChange3" value="{{array[index]}}" range="{{array}}">
+        <view class="nation_select">
+          <view class="city_text" wx:if="{{index == 999}}">选考科目1</view>
+          <view >选考科目3 {{name3}}</view>
+          <image class="select" src="/images/ic_select.png"></image>
+        </view>
+      </picker> -->
+      <view class="middle_item_title">地理成绩</view>
+    <input class="middle_item_word" value="{{q121}}" placeholder="请地理输入成绩" placeholder-class="pla_style" bindinput="InputGeographyScore" />
+  </view>
+</view>
+<!-- 总分 -->
+<view class="baseInfo">
+  <view class="middle_item">
+    <view class="middle_item_title">总分</view>
+    <input class="middle_item_word" value="{{q13}}" placeholder="请输入分数" placeholder-class="pla_style" bindinput="InputTotalScore" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">优惠分</view>
+    <input class="middle_item_word" value="{{q14}}" placeholder="请输入分数" placeholder-class="pla_style" bindinput="InputCheapScore" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">高考省份</view>
+    <input class="middle_item_word" value="{{q15}}" placeholder="请输入省份" placeholder-class="pla_style" bindinput="InputProvince" />
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">高考考生号（咨询班主任或查看高考准考证）</view>
+    <input class="middle_item_word" value="{{q16}}" placeholder="请输入高考考生号" placeholder-class="pla_style" bindinput="InputStudentNum" />
+  </view>
+</view>
+<!-- 确定按钮 -->
+<view class="downBtn">
+  <view class="next_btn" bindtap="toHighSchoolIndex">确定</view>
+</view>

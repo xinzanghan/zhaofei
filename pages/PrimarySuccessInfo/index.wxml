@@ -1,0 +1,74 @@
+<view class="baseInfo">
+  <view class="base_state">
+    <view class="span"></view>
+    <view class="base_state_word">生源情况</view>
+  </view>
+  <view class="base_item">
+    <view class="base_item_title">身份证号</view>
+    <view class="base_item_info">{{idcard}}</view>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">初选合格证编号</view>
+    <input type="text" value="{{step1_q1}}" class="middle_item_word" placeholder="请输入初选合格证编号" placeholder-class="pla_style" bindinput="InputBiaohao"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">就读学校名称</view>
+    <input class="middle_item_word" value="{{step1_q2}}" placeholder="请输入学校名称" placeholder-class="pla_style" bindinput="InputReading"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">学生姓名</view>
+    <input class="middle_item_word" value="{{step1_q3}}" placeholder="请输入学生姓名" placeholder-class="pla_style" bindinput="InputName"/>
+  </view>
+</view>
+<view class="baseInfo">
+  <view class="middle_item">
+    <view class="middle_item_title">本人在班级排名稳定在前多少名（咨询班主任）</view>
+    <input class="middle_item_word" value="{{step1_q4}}" placeholder="请输入名次" placeholder-class="pla_style" bindinput="InputStableRanking"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">班主任预估班级前多少名能考上一本（咨询班主任）</view>
+    <input class="middle_item_word" value="{{step1_q5}}" placeholder="请输入名次" placeholder-class="pla_style" bindinput="InputForecastRanking"/>
+  </view>
+  <view class="down_item">
+    <view class="middle_item_title">班主任预估你高考成绩等次（咨询班主任）</view>
+    <radio-group class="radio-group" bindchange="radioChange1">
+      <label class="radio" wx:for="{{items}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step1_q6}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+    
+  </view>
+</view>
+<view class="baseInfo">
+  <view class="middle_item">
+    <view class="middle_item_title">本人是否为艺术、体育类考生</view>
+    <radio-group class="radio-group1" bindchange="radioChange2">
+      <label class="radio" wx:for="{{kinds}}">
+        <radio class="radio_size" value="{{item.value}}" checked="{{item.value==step1_q7}}" color="#186AE6" />{{item.name}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">学校上届高三考取一本人数（不含艺术、体育类考生）</view>
+    <input class="middle_item_word" value="{{step1_q8}}" placeholder="请输入" placeholder-class="pla_style" bindinput="InputOneNum"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">学校上届高三一本升学率（咨询班主任）</view>
+    <view class="flex">
+      <input type="number" value="{{step1_q9}}" class="middle_item_word" placeholder="请输入" placeholder-class="pla_style" bindinput="InputAttendRate"/>
+    <view>%</view>
+    </view>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">学校本届高三人数（咨询班主任）</view>
+    <input class="middle_item_word" value="{{step1_q10}}" placeholder="请输入" placeholder-class="pla_style" bindinput="InputNum"/>
+  </view>
+  <view class="middle_item">
+    <view class="middle_item_title">学校预估本届高三能考一本人数（不含艺术、体育类考生）</view>
+    <input class="middle_item_word" value="{{step1_q11}}" placeholder="请输入" placeholder-class="pla_style" bindinput="InputForecastNum"/>
+  </view>
+</view>
+<!-- 下一项按钮 -->
+<view class="downBtn">
+  <view class="next_btn" bindtap="toNextPage">下一项</view>
+</view>

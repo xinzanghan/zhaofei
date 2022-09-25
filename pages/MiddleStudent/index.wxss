@@ -1,0 +1,67 @@
+page{
+    background-color: #fff;
+  }
+  /* 头部导航样式 */
+  .header {
+    width: 750rpx;
+    opacity: 1;
+    background: linear-gradient(#E3F1FF, #fff);
+    /* background: linear-gradient(180.25deg, rgba(227, 241, 255, 1) 0%, rgba(255, 255, 255, 1) 93%); */
+    box-sizing: border-box;
+    padding: 80rpx 48rpx 32rpx;
+  }
+  
+  .header-text {
+    color: #323233;
+    font-size: 52rpx;
+    font-weight: 700;
+  }
+  
+  /*中间内容样式 */
+  .main {
+    padding: 0 48rpx;
+    margin-bottom: 540rpx;
+    /* background: linear-gradient(#E3F1FF, #fff); */
+  
+  }
+  
+  .main-item {
+    width: 654rpx;
+    height: 204rpx;
+    /* line-height: 204rpx; */
+    box-sizing: border-box;
+    border-bottom: 1px solid #f0f1f4;
+    /* border: 1rpx solid red; */
+    padding-top: 52rpx;
+  }
+  
+  .main-title {
+    color: #323233;
+    font-size: 28rpx;
+    font-weight: 600;
+    margin-bottom: 16rpx;
+  }
+  
+  .input-color {
+    color: #C8C9CC;
+    font-size: 32rpx;
+  }
+  /* 底部按钮 */
+  .btn {
+    margin-top: 64rpx;
+    width: 654rpx;
+    color: #fff;
+    height: 88rpx;
+    text-align: center;
+    line-height: 88rpx;
+    border-radius: 28rpx;
+    background-color: #186AE6;
+  }
+  
+  .change-password {
+    margin-top: 48rpx;
+    text-align: center;
+    color: #186AE6;
+    font-size: 26rpx;
+    font-weight: 500;
+  }

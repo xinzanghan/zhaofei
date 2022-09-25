@@ -1,0 +1,203 @@
+<!--引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字  -->
+<navbar navbar-data='{{navbarData}}'></navbar>
+<view class='home-page' style='margin-top: {{height}}px'></view>
+
+
+<!-- 顶部 称谓开始 -->
+<view class="top">
+    <view class="top_list">
+        <view class="top_item">
+            <view class="top_title">称谓</view>
+            <input type="text" value="{{q1}}" placeholder="请输入称谓" placeholder-class="top_input" bindinput="appellation" />
+        </view>
+        <view class="top_item">
+            <view class="top_title">姓名</view>
+            <input type="text" value="{{q2}}" placeholder="请输入姓名" placeholder-class="top_input"  bindinput="name" />
+        </view>
+        <view class="top_item">
+            <view class="top_title">民族</view>
+            <input type="text" value="{{q3}}" placeholder="请输入民族" placeholder-class="top_input"  bindinput="nation"/>
+        </view>
+        <view class="top_item">
+            <view class="top_title">身份证号码</view>
+            <input type="text" value="{{q4}}" placeholder="440924197608205391" placeholder-class="top_input" bindinput="idcard"/>
+        </view>
+        <view class="top_item">
+            <view class="top_title">如已故,请标明出生年月、去世年月及去世原因</view>
+            <input type="text" value="{{q5}}" placeholder="1943.02出生，2010.10因肺感染病故" placeholder-class="top_input" bindinput="reason"/>
+        </view>
+        <view class="top_item">
+            <view class="top_title">籍贯</view>
+            <input type="text" value="{{q6}}" placeholder="请输入籍贯" placeholder-class="top_input" bindinput="native" />
+        </view>
+        <view class="top_item">
+            <view class="top_title">联系电话</view>
+            <input type="number" value="{{q7}}" placeholder="请输入手机号" placeholder-class="top_input" bindinput="phone" />
+        </view>
+    </view>
+</view>
+<!-- 政治面貌 -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">政治面貌</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="politicsStatus">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{ q8==1}}" color="#186AE6" />群众
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q8==2}}" color="#186AE6" />共青团员
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">文化程度</view>
+            <picker mode="selector" bindchange="bindCultureChange" value="{{culture[id]}}" range="{{culture}}">
+            <!-- {{current[id]!='' ? current[id] : id=9999}} -->
+                <view class="choose_school">
+                    <view class="nation_text">{{q9||'请选择文化程度'}}</view>
+                  
+                    <image class="arrow" src="/images/arrow.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="content_item">
+            <view class="content_title">婚姻状况</view>
+            <picker mode="selector" bindchange="bindMarriageChange" value="{{marriage[item]}}" range="{{marriage}}">
+                <view class="choose_school">
+                    <view class="nation_text">{{q10||'请选择婚姻状况'}}</view>
+                    <!-- <view wx:else>{{marriage[item]}}</view> -->
+                    <image class="arrow" src="/images/arrow.png"></image>
+                </view>
+            </picker>
+        </view>
+    </view>
+</view>
+
+<!-- 户籍所在省/市/区 -->
+<view class="content">
+    <view class="content_list">
+        <view class="content_item">
+            <view class="content_title">户籍地所在省/市/区</view>
+            <picker mode="region" bindchange="bindRegionChange">
+                <view class="choose_school">
+                    <view class="city_text" wx:if="{{q11 == ''}}">请选择学校居住省/市/区</view>
+                    <view wx:else> {{q11[0]}}-{{q11[1]}}-{{q11[2]}}</view>
+                    <image class="arrow" src="/images/arrow.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="content_item">
+            <view class="content_title">户籍地详细地址</view>
+            <input type="text" value="{{q12}}" placeholder="请输入地址" placeholder-class="content_input" bindinput="address" />
+        </view>
+        <view class="content_item">
+            <view class="content_title">户籍地所在派出所</view>
+            <input type="text" value="{{q13}}" placeholder="请输入户籍地所在派出所" placeholder-class="content_input"  bindinput="police"/>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">户籍地所在法院</view>
+            <input type="text" value="{{q14}}" placeholder="请输入户籍地所在法院" placeholder-class="content_input"  bindinput="court"/>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">户籍地所在检察院</view>
+            <input type="text" value="{{q15}}" placeholder="请输入户籍地所在检察院" placeholder-class="content_input"  bindinput="procuratorate"/>
+        </view>
+        <view class="content_item">
+            <view class="content_title">户籍地所在居（村）委会</view>
+            <input type="text" value="{{q16}}" placeholder="请输入户籍地所在居（村）委会" placeholder-class="content_input" bindinput="village"/>
+        </view>
+        <view class="content_item">
+            <view class="content_title">经常居住地所在省/市/区</view>
+            <picker mode="region" bindchange="bindLiveCity">
+                <view class="choose_school">
+                    <view class="city_text" wx:if="{{q17 == ''}}">请选择学校居住省/市/区</view>
+                    <view wx:else> {{q17[0]}}-{{q17[1]}}-{{q17[2]}}</view>
+                    <image class="arrow" src="/images/arrow.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">经常居住地详细地址</view>
+            <input type="text" value="{{q18}}" placeholder="请输入地址" placeholder-class="content_input"  bindinput="address1"/>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">经常居住地所在派出所</view>
+            <input type="text" value="{{q19}}" placeholder="请输入经常居住地所在派出所" placeholder-class="content_input"  bindinput="police1"/>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">经常居住地所在法院</view>
+            <input type="text" value="{{q20}}" placeholder="请输入经常居住地所在法院" placeholder-class="content_input"  bindinput="court1"/>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">经常居住地所在检察院</view>
+            <input type="text" value="{{q21}}" placeholder="请输入经常居住地所在检察院" placeholder-class="content_input" bindinput="procuratorate1" />
+        </view>
+        <view class="content_item ">
+            <view class="content_title">经常居住地所在居（村）委会</view>
+            <input type="text" value="{{q22}}" placeholder="请输入经常居住地所在居（村）委会" placeholder-class="content_input" bindinput="village1" />
+        </view>
+        <view class="content_item">
+            <view class="content_title">是否为公务员，国有企事业单位、军队、在校人员</view>
+            <view class="top_option">
+                <radio-group class="radio-group1" bindchange="civilServant">
+                    <label class="radio">
+                        <radio class="radio_size" value="1" checked="{{q23==1}}" color="#186AE6" />是
+                    </label>
+                    <label class="radio">
+                        <radio class="radio_size" value="2" checked="{{q23==2}}" color="#186AE6" />否
+                    </label>
+                </radio-group>
+            </view>
+        </view>
+        <view class="content_item">
+            <view class="content_title">工作单位所在省/市/区</view>
+            <picker mode="region" bindchange="bindWorkCity">
+                <view class="choose_school">
+                    <view class="city_text" wx:if="{{q24 == ''}}">请选择学校居住省/市/区</view>
+                    <view wx:else> {{q24[0]}}-{{q24[1]}}-{{q24[2]}}</view>
+                    <image class="arrow" src="/images/arrow.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">工作单位详细地</view>
+            <input type="text" value="{{q25}}" placeholder="请输入地址" placeholder-class="content_input" bindinput="workAddress" />
+        </view>
+        <view class="content_item ">
+            <view class="content_title">工作单位名称</view>
+            <input type="text" value="{{q26}}" placeholder="请输入工作单位名称" placeholder-class="content_input"  bindinput="workName" />
+        </view>
+        <view class="content_item ">
+            <view class="content_title">本人职务</view>
+            <input type="text" value="{{q27}}" placeholder="学生" placeholder-class="content_input"  bindinput="job"/>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">上级领导姓名</view>
+            <input type="text" value="{{q28}}" placeholder="请输入" placeholder-class="content_input"  bindinput="leader" />
+        </view>
+        <view class="content_item ">
+            <view class="content_title">上级领导职务</view>
+            <input type="text" value="{{q29}}" placeholder="请输入" placeholder-class="content_input"  bindinput="leaderJob"/>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">上级领导电话</view>
+            <input type="number" value="{{q30}}" placeholder="请输入" placeholder-class="content_input"  bindinput="leaderPhone"/>
+        </view>
+        <view class="content_item ">
+            <view class="content_title">备注</view>
+            <input type="text" value="{{q31}}" placeholder="请输入" placeholder-class="content_input"  bindinput="remark"/>
+        </view>
+    </view>
+</view>
+
+<!-- 底部按钮 -->
+<view class="bottom">
+    <view class="btn" bindtap="submit">
+        提交
+    </view>
+</view>
+
+ 
