@@ -1,6 +1,6 @@
 /* 背景 */
 page {
-    background-color:#F7F8FA;
+     background-color:#F7F8FA;
 }
 /* 头部样式 */
 .top {
